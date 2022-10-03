@@ -1,0 +1,45 @@
+@use '../../../styles/mixins'
+@use '../../../styles/variables'
+
+#sidebar
+    display: flex
+    justify-content: space-around
+    flex-direction: column
+    background-color: green
+    border-radius: 10px 0 0 10px
+
+    ul
+        list-style: none
+        margin: 15px
+
+        .itens-menu
+            @include mixins.logo-item
+
+        .item-icon
+            text-decoration: none
+            color: black
+            border-radius: 10px
+
+        .item-icon:hover
+            background: variables.$gradient
+            > svg
+                color: variables.$text-color
+
+        li
+            padding: 5px
+            margin-bottom: 10px
+            text-align: center
+
+    .sair
+        @include mixins.logo-item
+        border-radius: 10px
+
+        span
+            font-size: 1rem
+            margin: 0 15px
+            padding: 5px
+
+    .sair:hover
+        background: variables.$gradient
+        > svg
+            color: variables.$text-color
